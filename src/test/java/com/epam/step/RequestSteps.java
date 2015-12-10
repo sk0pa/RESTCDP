@@ -20,7 +20,7 @@ public class RequestSteps {
 
   private final String USER_AGENT = "Mozilla/5.0";
 
-  public String doPost(String url, int expResponceCode, String name, String capital, int count, String currency) {
+  public String doPost(String url, int expResponseCode, String name, String capital, int count, String currency) {
     StringBuffer response;
     HttpURLConnection con;
     try {
@@ -46,7 +46,7 @@ public class RequestSteps {
 
       int responseCode = con.getResponseCode();
       System.out.println(responseCode);
-      Assert.assertEquals(responseCode, expResponceCode, "Request was performed successfully");
+      Assert.assertEquals(responseCode, expResponseCode, "Request was performed successfully");
 
       response = readConnection(con);
     } catch (IOException e) {
@@ -57,7 +57,7 @@ public class RequestSteps {
 
   }
 
-  public String doGetAll(String url, int expResponceCode) {
+  public String doGetAll(String url, int expResponseCode) {
 
     StringBuffer response;
     HttpURLConnection con;
@@ -72,7 +72,7 @@ public class RequestSteps {
       con.setRequestProperty("User-Agent", USER_AGENT);
 
       int responseCode = con.getResponseCode();
-      Assert.assertTrue(responseCode == expResponceCode, "Request was performed successfully");
+      Assert.assertTrue(responseCode == expResponseCode, "Request was performed successfully");
 
       response = readConnection(con);
     } catch (IOException e) {
@@ -82,7 +82,7 @@ public class RequestSteps {
     return response.toString();
   }
 
-  public String doGet(String url, int expResponceCode, String id) {
+  public String doGet(String url, int expResponseCode, String id) {
     StringBuffer response;
     HttpURLConnection con;
     try {
@@ -95,7 +95,7 @@ public class RequestSteps {
       con.setRequestMethod("GET");
       con.setRequestProperty("User-Agent", USER_AGENT);
       int responseCode = con.getResponseCode();
-      Assert.assertEquals(responseCode, expResponceCode, "Request was performed successfully");
+      Assert.assertEquals(responseCode, expResponseCode, "Request was performed successfully");
 
       response = readConnection(con);
     } catch (IOException e) {
@@ -105,7 +105,7 @@ public class RequestSteps {
     return response.toString();
   }
 
-  public String doPut(String url, int expResponceCode, String id, String name, String capital, int count, String currency) {
+  public String doPut(String url, int expResponseCode, String id, String name, String capital, int count, String currency) {
     StringBuffer response;
     HttpURLConnection con;
     try {
@@ -130,7 +130,7 @@ public class RequestSteps {
       os.write(outputBytes);
       os.close();
       int responseCode = con.getResponseCode();
-      Assert.assertEquals(responseCode, expResponceCode, "Request was performed successfully");
+      Assert.assertEquals(responseCode, expResponseCode, "Request was performed successfully");
 
       response = readConnection(con);
     } catch (IOException e) {
@@ -140,7 +140,7 @@ public class RequestSteps {
     return response.toString();
   }
 
-  public String doDelete(String url, int expResponceCode, String id) {
+  public String doDelete(String url, int expResponseCode, String id) {
     StringBuffer response;
     HttpURLConnection con;
     try {
@@ -153,7 +153,7 @@ public class RequestSteps {
       con.setRequestMethod("DELETE");
       con.setRequestProperty("User-Agent", USER_AGENT);
       int responseCode = con.getResponseCode();
-      Assert.assertEquals(responseCode, expResponceCode, "Request was performed successfully");
+      Assert.assertEquals(responseCode, expResponseCode, "Request was performed successfully");
 
       response = readConnection(con);
     } catch (IOException e) {
