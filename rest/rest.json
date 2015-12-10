@@ -1,0 +1,111 @@
+{
+  "_type": "export",
+  "__export_format": 1,
+  "__export_date": "2015-12-10T09:40:23.579Z",
+  "__export_source": "insomnia.chrome.app:v2.1.5",
+  "items": [
+    {
+      "_type": "request_group",
+      "_id": "grp_1449675526240",
+      "name": "Country",
+      "environments": {},
+      "requests": [
+        {
+          "_type": "request",
+          "_id": "req_1449675526243",
+          "url": "http://localhost:8080/country",
+          "method": "GET",
+          "body": "{}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "/country"
+        },
+        {
+          "_type": "request",
+          "_id": "req_1449675571105",
+          "url": "http://localhost:8080/country/2bedbaa7-31d9-49b0-8079-e5eba7e7bf5a",
+          "method": "GET",
+          "body": "{}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "/country/{uuid}"
+        },
+        {
+          "_type": "request",
+          "_id": "req_1449675591427",
+          "url": "http://localhost:8080/country",
+          "method": "POST",
+          "body": "{\n    \"name\":\"test\",\n    \"capital\":\"Moscov\",\n    \"countOfPeople\":\"100500\",\n    \"nameOfCurrency\":\"RU\"\n}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "/country (POST)"
+        },
+        {
+          "_type": "request",
+          "_id": "req_1449676948249",
+          "url": "http://localhost:8080/country",
+          "method": "PUT",
+          "body": "{\n        \"uuid\": \"2bedbaa7-31d9-49b0-8079-e5eba7e7bsf5a\",\n        \"name\": \"test\",\n        \"capital\": \"Moscov\",\n        \"countOfPeople\": 9000,\n        \"nameOfCurrency\": \"RU\"\n    }",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "/country (PUT)"
+        },
+        {
+          "_type": "request",
+          "_id": "req_1449677018349",
+          "url": "http://localhost:8080/country/2bedbaa7-31d9-49b0-8079-e5eba7e7bf5a",
+          "method": "DELETE",
+          "body": "{}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "/country (DELETE)"
+        }
+      ]
+    }
+  ]
+}
